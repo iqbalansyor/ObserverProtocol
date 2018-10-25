@@ -15,6 +15,8 @@
 		C90FDFDF21817E9C00491D83 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C90FDFDE21817E9C00491D83 /* main.m */; };
 		C90FDFE921817E9D00491D83 /* ObserverProtocolExampleTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C90FDFE821817E9D00491D83 /* ObserverProtocolExampleTests.m */; };
 		C90FDFF421817E9D00491D83 /* ObserverProtocolExampleUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = C90FDFF321817E9D00491D83 /* ObserverProtocolExampleUITests.m */; };
+		C90FE00621817EE100491D83 /* Observable.m in Sources */ = {isa = PBXBuildFile; fileRef = C90FE00521817EE100491D83 /* Observable.m */; };
+		C90FE00921817FD400491D83 /* ViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C90FE00821817FD400491D83 /* ViewModel.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +53,10 @@
 		C90FDFEF21817E9D00491D83 /* ObserverProtocolExampleUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ObserverProtocolExampleUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C90FDFF321817E9D00491D83 /* ObserverProtocolExampleUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ObserverProtocolExampleUITests.m; sourceTree = "<group>"; };
 		C90FDFF521817E9D00491D83 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C90FE00421817EE100491D83 /* Observable.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Observable.h; sourceTree = "<group>"; };
+		C90FE00521817EE100491D83 /* Observable.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Observable.m; sourceTree = "<group>"; };
+		C90FE00721817FD400491D83 /* ViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewModel.h; sourceTree = "<group>"; };
+		C90FE00821817FD400491D83 /* ViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewModel.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,6 +116,10 @@
 				C90FDFDA21817E9C00491D83 /* LaunchScreen.storyboard */,
 				C90FDFDD21817E9C00491D83 /* Info.plist */,
 				C90FDFDE21817E9C00491D83 /* main.m */,
+				C90FE00421817EE100491D83 /* Observable.h */,
+				C90FE00521817EE100491D83 /* Observable.m */,
+				C90FE00721817FD400491D83 /* ViewModel.h */,
+				C90FE00821817FD400491D83 /* ViewModel.m */,
 			);
 			path = ObserverProtocolExample;
 			sourceTree = "<group>";
@@ -262,7 +272,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C90FE00621817EE100491D83 /* Observable.m in Sources */,
 				C90FDFD421817E9A00491D83 /* ViewController.m in Sources */,
+				C90FE00921817FD400491D83 /* ViewModel.m in Sources */,
 				C90FDFDF21817E9C00491D83 /* main.m in Sources */,
 				C90FDFD121817E9A00491D83 /* AppDelegate.m in Sources */,
 			);

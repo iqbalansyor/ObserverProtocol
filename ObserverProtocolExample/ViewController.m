@@ -7,23 +7,31 @@
 //
 
 #import "ViewController.h"
+#import "ViewModel.h"
 
 @interface ViewController ()
-
+@property (weak, nonatomic) IBOutlet UILabel *firstLabel;
+@property (weak, nonatomic) IBOutlet UILabel *secondLabel;
+@property (strong, nonatomic) ViewModel *viewModel;
 @end
 
 @implementation ViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+    [self configureViewModel];
 }
 
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+- (void)configureViewModel {
+    self.viewModel = [ViewModel new];
+    [self.viewModel.labelStrings subscribe:@"" block:^(NSString *oldValue, NSString *newValue) {
+        self.firstLabel.text = newValue;
+        self.secondLabel.text = newValue;
+    }];
 }
 
+- (IBAction)buttonTapped:(id)sender {
+    [self.viewModel buttonTapped];
+}
 
 @end
