@@ -10,7 +10,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "ObserverProtocolExample/ViewController.m"
-            timestampString = "562241882.560389"
+            timestampString = "562242012.152858"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "28"
@@ -25,56 +25,8 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "ObserverProtocolExample/Observable.m"
-            timestampString = "562135478.119933"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "30"
-            endingLineNumber = "30"
-            landmarkName = "-setValue:"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "-[Observable setValue:]"
-                  moduleName = "ObserverProtocolExample"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/iqbal.ansyori/Documents/iqbalansyori/ObserverProtocolExample/ObserverProtocolExample/Observable.m"
-                  timestampString = "562241819.8916039"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "30"
-                  endingLineNumber = "30"
-                  offsetFromSymbolStart = "148">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "-[Observable setValue:]"
-                  moduleName = "ObserverProtocolExample"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/iqbal.ansyori/Documents/iqbalansyori/ObserverProtocolExample/ObserverProtocolExample/Observable.m"
-                  timestampString = "562241819.8937989"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "30"
-                  endingLineNumber = "30"
-                  offsetFromSymbolStart = "163">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
             filePath = "ObserverProtocolExample/ViewModel.m"
-            timestampString = "562241882.560828"
+            timestampString = "562242012.153281"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "27"

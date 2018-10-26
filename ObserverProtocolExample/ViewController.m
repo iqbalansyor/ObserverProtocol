@@ -22,8 +22,13 @@
     [self configureViewModel];
 }
 
+- (void)dealloc {
+    
+}
+
 - (void)configureViewModel {
     self.viewModel = [ViewModel new];
+    
     [self.viewModel.labelStrings subscribe:@"" block:^(NSString *oldValue, NSString *newValue) {
         self.firstLabel.text = newValue;
         self.secondLabel.text = newValue;
