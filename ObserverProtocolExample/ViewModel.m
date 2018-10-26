@@ -20,7 +20,12 @@
 }
 
 - (void)buttonTapped {
-    self.labelStrings.value = @"tapped";
+    if ([self.labelStrings.value isEqualToString:@"tapped"]) {
+        self.labelStrings.value = @"label";
+    }
+    else {
+    	self.labelStrings.value = @"tapped";
+    }
 }
 
 @end
