@@ -8,8 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@class Tuple;
-
 @interface Observable<T> : NSObject
 @property (strong, nonatomic) id value;
 typedef void(^ObserverBlock)(T, T);

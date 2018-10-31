@@ -1,14 +1,14 @@
 //
-//  Tuple.m
+//  DoubleTuple.m
 //  ObserverProtocolExample
 //
 //  Created by Iqbal.ansyori on 31/10/18.
 //  Copyright © 2018 Iqbal.ansyori. All rights reserved.
 //
 
-#import "Tuple.h"
+#import "DoubleTuple.h"
 
-@implementation Tuple
+@implementation DoubleTuple
 
 + (instancetype)tupleWithFirst:(id)first second:(id)second {
     return [[self alloc] initWithFirst:first second:second];

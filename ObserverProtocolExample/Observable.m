@@ -7,10 +7,10 @@
 //
 
 #import "Observable.h"
-#import "Tuple.h"
+#import "DoubleTuple.h"
 
 @interface Observable ()
-@property (nonatomic, strong) NSMutableArray<Tuple *> *observerEntries;
+@property (nonatomic, strong) NSMutableArray<DoubleTuple *> *observerEntries;
 @end
 
 @implementation Observable
@@ -33,20 +33,20 @@
         return;
     }
     
-    for (Tuple *observerEntry in self.observerEntries) {
+    for (DoubleTuple *observerEntry in self.observerEntries) {
         ObserverBlock block = (ObserverBlock)observerEntry.second;
         block(oldValue, value);
     }
 }
 
 - (void)subscribe:(id)observer block:(void (^)(id, id))block {
-    Tuple *observerEntry = [Tuple tupleWithFirst:observer second:block];
+    DoubleTuple *observerEntry = [DoubleTuple tupleWithFirst:observer second:block];
     [_observerEntries addObject:observerEntry];
 }
 
 - (void)unsubscribe:(id)observer {
-    NSMutableArray<Tuple *> *filteredObserverEntries = [NSMutableArray new];
-    for (Tuple *observerEntry in self.observerEntries) {
+    NSMutableArray<DoubleTuple *> *filteredObserverEntries = [NSMutableArray new];
+    for (DoubleTuple *observerEntry in self.observerEntries) {
         BOOL shouldAddObserverEntry = observerEntry.first != observer;
         if (shouldAddObserverEntry) {
             [filteredObserverEntries addObject:observerEntry];

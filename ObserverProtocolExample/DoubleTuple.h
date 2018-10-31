@@ -1,5 +1,5 @@
 //
-//  Tuple.h
+//  DoubleTuple.h
 //  ObserverProtocolExample
 //
 //  Created by Iqbal.ansyori on 31/10/18.
@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface Tuple : NSObject <NSCopying>
+@interface DoubleTuple : NSObject <NSCopying>
 @property (nonatomic, readonly, nullable) id first;
 @property (nonatomic, readonly, nullable) id second;
 
