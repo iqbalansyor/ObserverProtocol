@@ -8,13 +8,13 @@
 
 #import <UIKit/UIKit.h>
 
-@interface Observable<id> : NSObject
-@property (strong, nonatomic) id value;
-typedef void(^ObserverBlock)(id, id);
-@property (strong, nonatomic) NSMutableArray<ObserverBlock>* observerBlocks;
-@property (strong, nonatomic) NSMutableArray<id> *observers;
+@class Tuple;
 
--(void)subscribe:(id)observer block:(void(^)(id, id))block;
-//-(void)unsubscribe:(id)observer;
+@interface Observable<T> : NSObject
+@property (strong, nonatomic) id value;
+typedef void(^ObserverBlock)(T, T);
+
+-(void)subscribe:(id)observer block:(void(^)(T, T))block;
+-(void)unsubscribe:(id)observer;
 @end
 

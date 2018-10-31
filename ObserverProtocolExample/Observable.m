@@ -7,9 +7,10 @@
 //
 
 #import "Observable.h"
+#import "Tuple.h"
 
 @interface Observable ()
-//@property (strong, nonatomic) NSMutableArray<id>* observers;
+@property (nonatomic, strong) NSMutableArray<Tuple *> *observerEntries;
 @end
 
 @implementation Observable
@@ -18,8 +19,7 @@
 {
     self = [super init];
     if (self) {
-        self.observerBlocks = [NSMutableArray new];
-        self.observers = [NSMutableArray new];
+        _observerEntries = [NSMutableArray new];
     }
     return self;
 }
@@ -27,18 +27,33 @@
 - (void)setValue:(id)value {
     id oldValue = _value;
     _value = value;
-    for (ObserverBlock block in _observerBlocks) {
+    
+    BOOL validObseverEntries = self.observerEntries.count > 0;
+    if (!validObseverEntries) {
+        return;
+    }
+    
+    for (Tuple *observerEntry in self.observerEntries) {
+        ObserverBlock block = (ObserverBlock)observerEntry.second;
         block(oldValue, value);
     }
 }
 
 - (void)subscribe:(id)observer block:(void (^)(id, id))block {
-    [self.observers addObject:observer];
-    [self.observerBlocks addObject:block];
+    Tuple *observerEntry = [Tuple tupleWithFirst:observer second:block];
+    [_observerEntries addObject:observerEntry];
 }
 
-//- (void)unsubscribe:(id)observer {
-//    NSMutableArray<ObserverBlock>* filtered
-//}
+- (void)unsubscribe:(id)observer {
+    NSMutableArray<Tuple *> *filteredObserverEntries = [NSMutableArray new];
+    for (Tuple *observerEntry in self.observerEntries) {
+        BOOL shouldAddObserverEntry = observerEntry.first != observer;
+        if (shouldAddObserverEntry) {
+            [filteredObserverEntries addObject:observerEntry];
+        }
+    }
+    
+    self.observerEntries = filteredObserverEntries;
+}
 
 @end
