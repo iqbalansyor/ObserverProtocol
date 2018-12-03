@@ -116,25 +116,16 @@
 		C90FDFCE21817E9A00491D83 /* ObserverProtocolExample */ = {
 			isa = PBXGroup;
 			children = (
+				C9972B9821B51424007E840B /* SecondVC */,
+				C9972B9721B51410007E840B /* FirstVC */,
+				C9972B9621B513F1007E840B /* TVL */,
 				C90FDFCF21817E9A00491D83 /* AppDelegate.h */,
 				C90FDFD021817E9A00491D83 /* AppDelegate.m */,
-				C90FDFD221817E9A00491D83 /* ViewController.h */,
-				C90FDFD321817E9A00491D83 /* ViewController.m */,
 				C90FDFD521817E9A00491D83 /* Main.storyboard */,
 				C90FDFD821817E9C00491D83 /* Assets.xcassets */,
 				C90FDFDA21817E9C00491D83 /* LaunchScreen.storyboard */,
 				C90FDFDD21817E9C00491D83 /* Info.plist */,
 				C90FDFDE21817E9C00491D83 /* main.m */,
-				C90FE00421817EE100491D83 /* TVLObservable.h */,
-				C90FE00521817EE100491D83 /* TVLObservable.m */,
-				C90FE00721817FD400491D83 /* ViewModel.h */,
-				C90FE00821817FD400491D83 /* ViewModel.m */,
-				C93A975921895768003B0F9C /* TVLDoubleTuple.h */,
-				C93A975A21895768003B0F9C /* TVLDoubleTuple.m */,
-				C9972B9021B5076F007E840B /* SecondViewController.h */,
-				C9972B9121B5076F007E840B /* SecondViewController.m */,
-				C9972B9321B50872007E840B /* SecondViewModel.h */,
-				C9972B9421B50872007E840B /* SecondViewModel.m */,
 			);
 			path = ObserverProtocolExample;
 			sourceTree = "<group>";
@@ -155,6 +146,39 @@
 				C90FDFF521817E9D00491D83 /* Info.plist */,
 			);
 			path = ObserverProtocolExampleUITests;
+			sourceTree = "<group>";
+		};
+		C9972B9621B513F1007E840B /* TVL */ = {
+			isa = PBXGroup;
+			children = (
+				C90FE00421817EE100491D83 /* TVLObservable.h */,
+				C90FE00521817EE100491D83 /* TVLObservable.m */,
+				C93A975921895768003B0F9C /* TVLDoubleTuple.h */,
+				C93A975A21895768003B0F9C /* TVLDoubleTuple.m */,
+			);
+			path = TVL;
+			sourceTree = "<group>";
+		};
+		C9972B9721B51410007E840B /* FirstVC */ = {
+			isa = PBXGroup;
+			children = (
+				C90FDFD221817E9A00491D83 /* ViewController.h */,
+				C90FDFD321817E9A00491D83 /* ViewController.m */,
+				C90FE00721817FD400491D83 /* ViewModel.h */,
+				C90FE00821817FD400491D83 /* ViewModel.m */,
+			);
+			path = FirstVC;
+			sourceTree = "<group>";
+		};
+		C9972B9821B51424007E840B /* SecondVC */ = {
+			isa = PBXGroup;
+			children = (
+				C9972B9021B5076F007E840B /* SecondViewController.h */,
+				C9972B9121B5076F007E840B /* SecondViewController.m */,
+				C9972B9321B50872007E840B /* SecondViewModel.h */,
+				C9972B9421B50872007E840B /* SecondViewModel.m */,
+			);
+			path = SecondVC;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
