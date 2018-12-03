@@ -18,6 +18,8 @@
 		C90FE00621817EE100491D83 /* Observable.m in Sources */ = {isa = PBXBuildFile; fileRef = C90FE00521817EE100491D83 /* Observable.m */; };
 		C90FE00921817FD400491D83 /* ViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C90FE00821817FD400491D83 /* ViewModel.m */; };
 		C93A975B21895768003B0F9C /* DoubleTuple.m in Sources */ = {isa = PBXBuildFile; fileRef = C93A975A21895768003B0F9C /* DoubleTuple.m */; };
+		C9972B9221B5076F007E840B /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C9972B9121B5076F007E840B /* SecondViewController.m */; };
+		C9972B9521B50872007E840B /* SecondViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C9972B9421B50872007E840B /* SecondViewModel.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,6 +62,10 @@
 		C90FE00821817FD400491D83 /* ViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewModel.m; sourceTree = "<group>"; };
 		C93A975921895768003B0F9C /* DoubleTuple.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DoubleTuple.h; sourceTree = "<group>"; };
 		C93A975A21895768003B0F9C /* DoubleTuple.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DoubleTuple.m; sourceTree = "<group>"; };
+		C9972B9021B5076F007E840B /* SecondViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SecondViewController.h; sourceTree = "<group>"; };
+		C9972B9121B5076F007E840B /* SecondViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SecondViewController.m; sourceTree = "<group>"; };
+		C9972B9321B50872007E840B /* SecondViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SecondViewModel.h; sourceTree = "<group>"; };
+		C9972B9421B50872007E840B /* SecondViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SecondViewModel.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -125,6 +131,10 @@
 				C90FE00821817FD400491D83 /* ViewModel.m */,
 				C93A975921895768003B0F9C /* DoubleTuple.h */,
 				C93A975A21895768003B0F9C /* DoubleTuple.m */,
+				C9972B9021B5076F007E840B /* SecondViewController.h */,
+				C9972B9121B5076F007E840B /* SecondViewController.m */,
+				C9972B9321B50872007E840B /* SecondViewModel.h */,
+				C9972B9421B50872007E840B /* SecondViewModel.m */,
 			);
 			path = ObserverProtocolExample;
 			sourceTree = "<group>";
@@ -280,6 +290,8 @@
 				C93A975B21895768003B0F9C /* DoubleTuple.m in Sources */,
 				C90FE00621817EE100491D83 /* Observable.m in Sources */,
 				C90FDFD421817E9A00491D83 /* ViewController.m in Sources */,
+				C9972B9221B5076F007E840B /* SecondViewController.m in Sources */,
+				C9972B9521B50872007E840B /* SecondViewModel.m in Sources */,
 				C90FE00921817FD400491D83 /* ViewModel.m in Sources */,
 				C90FDFDF21817E9C00491D83 /* main.m in Sources */,
 				C90FDFD121817E9A00491D83 /* AppDelegate.m in Sources */,

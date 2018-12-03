@@ -8,9 +8,24 @@
 
 #import <UIKit/UIKit.h>
 
-@interface DoubleTuple : NSObject <NSCopying>
-@property (nonatomic, readonly, nullable) id first;
-@property (nonatomic, readonly, nullable) id second;
+@interface DoubleTuple<A, B> : NSObject <NSCopying>
 
-+ (instancetype)tupleWithFirst:(id)first second:(id)second;
+/**
+ First object of this instance.
+ */
+@property (nonatomic, readonly, nullable) A first;
+
+/**
+ Second object of this instance.
+ */
+@property (nonatomic, readonly, nullable) B second;
+
+/**
+ Create tuple object with passed first and second object.
+
+ @param first first object
+ @param second second object
+ @return this instance
+ */
++ (instancetype)tupleWithFirst:(A)first second:(B)second;
 @end
