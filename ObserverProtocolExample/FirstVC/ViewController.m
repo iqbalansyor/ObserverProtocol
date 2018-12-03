@@ -39,13 +39,17 @@
     }];
 }
 
-- (IBAction)tapButton:(id)sender {
-    [self.viewModel buttonTapped];
+- (IBAction)tapNormalButton:(id)sender {
+    [self.viewModel tapNormalButton];
     
     self.count += 1;
     if (self.count == 4) {
         [self.viewModel.labelStrings unsubscribe:self];
     }
+}
+
+- (IBAction)tapTappedButton:(id)sender {
+    [self.viewModel tapTappedButton];
 }
 
 - (IBAction)tapNext:(id)sender {

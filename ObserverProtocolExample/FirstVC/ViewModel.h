@@ -12,6 +12,7 @@
 @interface ViewModel : NSObject
 
 @property (strong, nonatomic) TVLObservable<NSString *> *labelStrings;
-- (void)buttonTapped;
+- (void)tapNormalButton;
+- (void)tapTappedButton;
 
 @end

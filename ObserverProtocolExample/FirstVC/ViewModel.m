@@ -19,13 +19,12 @@
     return self;
 }
 
-- (void)buttonTapped {
-    if ([self.labelStrings.value isEqualToString:@"tapped"]) {
-        self.labelStrings.value = @"label";
-    }
-    else {
-    	self.labelStrings.value = @"tapped";
-    }
+- (void)tapNormalButton {
+    self.labelStrings.value = @"normal";
+}
+
+- (void)tapTappedButton {
+    self.labelStrings.value = @"tapped";
 }
 
 @end
