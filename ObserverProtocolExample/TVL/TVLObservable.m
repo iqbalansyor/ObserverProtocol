@@ -10,7 +10,7 @@
 #import "TVLDoubleTuple.h"
 
 @interface TVLObservable ()
-@property (nonatomic, strong) NSMutableArray<TVLDoubleTuple<NSString *, ObserverBlock> *> *observerEntries;
+@property (nonatomic, strong) NSMutableDictionary<NSString *, ObserverBlock> *observerEntries;
 @end
 
 @implementation TVLObservable
@@ -19,7 +19,7 @@
 {
     self = [super init];
     if (self) {
-        _observerEntries = [NSMutableArray new];
+        _observerEntries = [NSMutableDictionary new];
     }
     return self;
 }
@@ -33,27 +33,18 @@
         return;
     }
     
-    for (TVLDoubleTuple<id, ObserverBlock> *observerEntry in self.observerEntries) {
-        observerEntry.second(oldValue, value);
+    for (NSString *key in self.observerEntries) {
+        ObserverBlock block = self.observerEntries[key];
+        block(oldValue, value);
     }
 }
 
 - (void)subscribe:(id)observer block:(void (^)(id, id))block {
-    NSString *observerString = [observer description];
-    TVLDoubleTuple *observerEntry = [TVLDoubleTuple tupleWithFirst:observerString second:block];
-    [_observerEntries addObject:observerEntry];
+    [self.observerEntries setValue:block forKey:[observer description]];
 }
 
 - (void)unsubscribe:(id)observer {
-    NSMutableArray<TVLDoubleTuple<NSString *, ObserverBlock> *> *filteredObserverEntries = [NSMutableArray new];
-    for (TVLDoubleTuple *observerEntry in self.observerEntries) {
-        BOOL shouldAddObserverEntry = observerEntry.first != observer;
-        if (shouldAddObserverEntry) {
-            [filteredObserverEntries addObject:observerEntry];
-        }
-    }
-    
-    self.observerEntries = filteredObserverEntries;
+    [self.observerEntries removeObjectForKey:[observer description]];
 }
 
 @end
