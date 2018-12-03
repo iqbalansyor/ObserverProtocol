@@ -7,7 +7,7 @@
 //
 
 #import "SecondViewModel.h"
-#import "Observable.h"
+#import "TVLObservable.h"
 
 @implementation SecondViewModel
 
@@ -15,7 +15,7 @@
 {
     self = [super init];
     if (self) {
-        self.labelString = [Observable new];
+        self.labelString = [TVLObservable new];
     }
     return self;
 }

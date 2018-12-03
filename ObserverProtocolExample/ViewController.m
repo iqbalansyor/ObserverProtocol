@@ -39,7 +39,7 @@
     }];
 }
 
-- (IBAction)buttonTapped:(id)sender {
+- (IBAction)tapButton:(id)sender {
     [self.viewModel buttonTapped];
     
     self.count += 1;

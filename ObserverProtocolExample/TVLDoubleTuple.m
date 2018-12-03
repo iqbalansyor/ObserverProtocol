@@ -6,9 +6,9 @@
 //  Copyright © 2018 Iqbal.ansyori. All rights reserved.
 //
 
-#import "DoubleTuple.h"
+#import "TVLDoubleTuple.h"
 
-@implementation DoubleTuple
+@implementation TVLDoubleTuple
 
 + (instancetype)tupleWithFirst:(id)first second:(id)second {
     return [[self alloc] initWithFirst:first second:second];

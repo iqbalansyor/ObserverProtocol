@@ -8,11 +8,11 @@
 
 #import <Foundation/Foundation.h>
 
-@class Observable<T>;
+@class TVLObservable<T>;
 
 @interface SecondViewModel : NSObject
 
-@property (nonatomic, strong) Observable<NSString *> *labelString;
+@property (nonatomic, strong) TVLObservable<NSString *> *labelString;
 
 - (void)tapSecondButton;
 

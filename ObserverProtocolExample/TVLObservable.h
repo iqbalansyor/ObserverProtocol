@@ -1,5 +1,5 @@
 //
-//  Observable.h
+//  TVLObservable.h
 //  ObserverProtocolExample
 //
 //  Created by Iqbal.ansyori on 25/10/18.
@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface Observable<T> : NSObject
+@interface TVLObservable<T> : NSObject
 
 /**
  Value of this `Observable` instance

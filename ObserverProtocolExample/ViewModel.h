@@ -7,11 +7,11 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "Observable.h"
+#import "TVLObservable.h"
 
 @interface ViewModel : NSObject
 
-@property (strong, nonatomic) Observable<NSString *> *labelStrings;
+@property (strong, nonatomic) TVLObservable<NSString *> *labelStrings;
 - (void)buttonTapped;
 
 @end

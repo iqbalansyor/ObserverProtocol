@@ -8,7 +8,7 @@
 
 #import "SecondViewController.h"
 #import "SecondViewModel.h"
-#import "Observable.h"
+#import "TVLObservable.h"
 
 @interface SecondViewController ()
 @property (weak, nonatomic) IBOutlet UILabel *label;
@@ -23,9 +23,9 @@
     self.viewModel = [SecondViewModel new];
     
     __weak typeof(self) weakSelf = self;
-//    [self.viewModel.labelString subscribe:self block:^(NSString *oldValue, NSString *newValue) {
-//        weakSelf.label.text = newValue;
-//    }];
+    [self.viewModel.labelString subscribe:self block:^(NSString *oldValue, NSString *newValue) {
+        weakSelf.label.text = newValue;
+    }];
 }
 
 

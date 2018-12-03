@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface DoubleTuple<A, B> : NSObject <NSCopying>
+@interface TVLDoubleTuple<A, B> : NSObject <NSCopying>
 
 /**
  First object of this instance.

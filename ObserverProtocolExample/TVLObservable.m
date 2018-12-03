@@ -6,14 +6,14 @@
 //  Copyright © 2018 Iqbal.ansyori. All rights reserved.
 //
 
-#import "Observable.h"
-#import "DoubleTuple.h"
+#import "TVLObservable.h"
+#import "TVLDoubleTuple.h"
 
-@interface Observable ()
-@property (nonatomic, strong) NSMutableArray<DoubleTuple<NSString *, ObserverBlock> *> *observerEntries;
+@interface TVLObservable ()
+@property (nonatomic, strong) NSMutableArray<TVLDoubleTuple<NSString *, ObserverBlock> *> *observerEntries;
 @end
 
-@implementation Observable
+@implementation TVLObservable
 
 - (instancetype)init
 {
@@ -33,21 +33,20 @@
         return;
     }
     
-    for (DoubleTuple<id, ObserverBlock> *observerEntry in self.observerEntries) {
+    for (TVLDoubleTuple<id, ObserverBlock> *observerEntry in self.observerEntries) {
         observerEntry.second(oldValue, value);
     }
 }
 
-- (void)subscribe:(NSString *)observer block:(void (^)(id, id))block {
-    NSString *observerString = observer;
-    NSLog(@"%@", observerString);
-    DoubleTuple *observerEntry = [DoubleTuple tupleWithFirst:observerString second:block];
+- (void)subscribe:(id)observer block:(void (^)(id, id))block {
+    NSString *observerString = [observer description];
+    TVLDoubleTuple *observerEntry = [TVLDoubleTuple tupleWithFirst:observerString second:block];
     [_observerEntries addObject:observerEntry];
 }
 
 - (void)unsubscribe:(id)observer {
-    NSMutableArray<DoubleTuple<NSString *, ObserverBlock> *> *filteredObserverEntries = [NSMutableArray new];
-    for (DoubleTuple *observerEntry in self.observerEntries) {
+    NSMutableArray<TVLDoubleTuple<NSString *, ObserverBlock> *> *filteredObserverEntries = [NSMutableArray new];
+    for (TVLDoubleTuple *observerEntry in self.observerEntries) {
         BOOL shouldAddObserverEntry = observerEntry.first != observer;
         if (shouldAddObserverEntry) {
             [filteredObserverEntries addObject:observerEntry];

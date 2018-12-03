@@ -14,7 +14,7 @@
 {
     self = [super init];
     if (self) {
-        self.labelStrings = [[Observable alloc] init];
+        self.labelStrings = [[TVLObservable alloc] init];
     }
     return self;
 }
